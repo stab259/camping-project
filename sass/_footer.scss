@@ -1,0 +1,138 @@
+.footer {
+  background-color: $color-primary;
+  grid-area: footer-start / full-start / footer-end / full-end;
+
+  padding: 5rem 10rem 3rem;
+  border-radius: 10rem 10rem 0 0;
+  position: relative;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 8rem 3rem 2rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
+  }
+
+  &__intro {
+    width: 50%;
+    padding-right: 15%;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding-right: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__intro .paragraph {
+    font-size: 1rem;
+    word-spacing: 0;
+    font-weight: 500;
+  }
+
+  &__navs {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nav {
+    width: 33%;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 11rem;
+    }
+  }
+
+  // &__download {
+  // }
+
+  &__img-box {
+    width: 60%;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  &__img {
+    display: block;
+    width: 50%;
+    cursor: pointer;
+  }
+
+  &__backToTop {
+    display: block;
+    position: absolute;
+    top: -2rem;
+    right: 10rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: $color-white;
+    background-image: url("../img/arrow-up.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-size: 30%;
+      transform: scale(1.2);
+      border: 2px solid $color-primary-dark;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      top: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__copyright {
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+.f-nav {
+  // &__list {
+  // }
+
+  &__item {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: $color-font;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color-primary-dark;
+      transform: translateY(0.2rem);
+      font-size: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.subscribe {
+  background-color: $color-primary;
+  grid-area: subscribe-start / col-start 1 / subscribe-end / col-end -1;
+
+  border-radius: 2rem;
+  margin-bottom: 10rem;
+  padding: 1rem 4rem;
+  height: min-content;
+
+  display: flex;
+  align-items: center;
+  gap: 30%;
+  justify-content: center;
+
+  background-image: url("../img/part-bg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+    row-gap: 2rem;
+    background-image: none;
+  }
+
+  &__form {
+    width: 40%;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      order: 1;
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    width: 80%;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+    }
+  }
+
+  &__heading .paragraph {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &__img-box {
+    width: 30%;
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      order: 0;
+      margin-top: 3rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
+
+.form {
+  &__group {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    padding: 1.7rem 1rem 1.7rem 4rem;
+    border-radius: 1rem;
+    background-image: url("../img/letter.png");
+    background-repeat: no-repeat;
+    background-size: 1.8rem;
+    background-position: 1.3rem;
+    font-size: 1.2rem;
+    color: $color-grey;
+    outline: none;
+    border: 2px solid $color-white;
+
+    &:focus {
+      border: 2px solid $color-primary-dark;
+    }
+  }
+
+  &__submit {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: $color-primary-dark;
+    border: none;
+    border-radius: 1rem;
+    background-image: url("../img/plane.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-size: 40%;
+      transform: scale(1.2);
+    }
+  }
+}
